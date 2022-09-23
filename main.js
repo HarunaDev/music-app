@@ -10,4 +10,19 @@ const title = document.querySelector('#title');
 const cover = document.querySelector('#cover');
 
 // song titles array
-const songs = ['Heroes', 'Sentimental Lady', 'Come on Eileen']
+const songs = ['Heroes', 'Sentimental-Lady', 'Eileen'];
+
+// keep track of songs
+
+let songIndex = 2
+
+// initially load songs into dom
+loadSong(songs[songIndex]);
+
+
+// update song details
+function loadSong(song) {
+  title.innerText = song 
+  audio.src = `music/${song}.m4a`;
+  cover.src = `img/${song}.png`;
+}
