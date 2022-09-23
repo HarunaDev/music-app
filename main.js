@@ -27,14 +27,24 @@ function loadSong(song) {
   cover.src = `img/${song}.png`;
 }
 
+// play song function
+function playSong() {
+  musicContainer.classList.add('play')
+  playBtn.querySelector('i.fas').classList.remove('fa-play')
+  playBtn.querySelector('i.fas').classList.add('fa-pause')
+}
+
+// pause song function
+function pauseSong() {}
+
 // event listeners
 playBtn.addEventListener('click', () => {
   // check if music  container has class of play
   const isPlaying = musicContainer.classList.contains('play')
 
   if(isPlaying) {
-    // pauseSong()
+    pauseSong()
   } else {
-    // playSong()
+    playSong()
   }
 })
