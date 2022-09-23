@@ -43,6 +43,21 @@ function pauseSong() {
   audio.pause()
 }
 
+// prev song function
+function prevSong() {
+  songIndex--
+
+  if(songIndex < 0) {
+    songIndex = songs.length - 1
+  }
+
+  loadSong(songs[songIndex])
+  playSong()
+}
+
+// next song function
+function nextSong() {}
+
 // event listeners
 playBtn.addEventListener('click', () => {
   // check if music  container has class of play
@@ -54,3 +69,7 @@ playBtn.addEventListener('click', () => {
     playSong()
   }
 })
+
+// change song events
+prevBtn.addEventListener('click', prevSong)
+nextBtn.addEventListener('click', nextSong)
