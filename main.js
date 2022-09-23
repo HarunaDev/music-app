@@ -26,3 +26,15 @@ function loadSong(song) {
   audio.src = `music/${song}.m4a`;
   cover.src = `img/${song}.png`;
 }
+
+// event listeners
+playBtn.addEventListener('click', () => {
+  // check if music  container has class of play
+  const isPlaying = musicContainer.classList.contains('play')
+
+  if(isPlaying) {
+    // pauseSong()
+  } else {
+    // playSong()
+  }
+})
