@@ -75,6 +75,19 @@ const progressPercent = (currentTime / duration) * 100
 progress.style.width = `${progressPercent}%`
 }
 
+// set progress function
+function setProgress(e) {
+  const width = this.clientWidth 
+  // console.log(width)
+  const clickX = e.offsetX
+  // console.log(clickX)
+  // grab duration
+  const duration = audio.duration
+
+// set audio time to point clicked in progress bar
+  audio.currentTime = (clickX / width) * duration
+}
+
 // event listeners
 playBtn.addEventListener('click', () => {
   // check if music  container has class of play
@@ -92,3 +105,5 @@ prevBtn.addEventListener('click', prevSong)
 nextBtn.addEventListener('click', nextSong)
 
 audio.addEventListener('timeupdate', updateProgress)
+
+progressContainer.addEventListener('click', setProgress)
