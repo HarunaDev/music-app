@@ -10,11 +10,11 @@ const title = document.querySelector('#title');
 const cover = document.querySelector('#cover');
 
 // song titles array
-const songs = ['Heroes', 'Sentimental-Lady', 'Eileen'];
+const songs = ['black-clover-2', 'black-clover', 'grappler-baki', 'naruto'];
 
 // keep track of songs
 
-let songIndex = 2
+let songIndex = 3
 
 // initially load songs into dom
 loadSong(songs[songIndex]);
